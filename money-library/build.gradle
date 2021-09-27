@@ -21,11 +21,7 @@ dependencies {
 }
 
 publishing {
-    repositories {
-        maven {
-            url = "$buildDir/../../mvn-repo"
-        }
-    }
+    
     publications {
         maven(MavenPublication) {
             groupId = 'com.practicalunittesting.chp03.money'
@@ -33,6 +29,11 @@ publishing {
             version = '1.0'
 
             from components.java
+        }
+   }
+   repositories {
+        maven {
+           url = "../mvn-repo"
         }
     }
 }
